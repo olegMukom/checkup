@@ -1,0 +1,600 @@
+@font-face 
+  font-family: 'SF UI Text Regular'
+  font-style: normal
+  font-weight: normal
+  src: local('SF UI Text Regular'), url('SFUIText-Regular.woff') format('woff')
+
+
+
+@font-face 
+  font-family: 'SF UI Text Medium'
+  font-style: normal
+  font-weight: normal
+  src: local('SF UI Text Medium'), url('SFUIText-Medium.woff') format('woff')
+
+
+@font-face 
+  font-family: 'SF UI Text Bold'
+  font-style: normal
+  font-weight: normal
+  src: local('SF UI Text Bold'), url('SFUIText-Bold.woff') format('woff')
+
+
+@font-face 
+  font-family: 'SF UI Text Light'
+  font-style: normal
+  font-weight: normal
+  src: local('SF UI Text Light'), url('SFUIText-Light.woff') format('woff')
+
+
+
+#wrapper_desctop 
+	display: none
+	align-items: center
+	justify-content: center
+	font-family: 'SF UI Text Regular'
+	font-size: 30px
+	width: 100vw
+	height: 100vh
+	position: fixed
+
+input, button, a, img 
+  outline: none !important
+
+body
+  background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%)
+  position: relative
+
+img 
+  // max-width: 100%
+
+.container
+	display: none
+
+* 
+  box-sizing: border-box
+
+@media (min-width: 576px) 
+	#wrapper_desctop 
+		display: -webkit-box 
+		display: -moz-box
+		display: -ms-flexbox
+		display: -webkit-flex 
+		display: flex
+	
+@media (max-width: 576px) 
+  .container
+    display: block
+    padding-top: 29px
+    width: 100%
+    background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%)
+
+.pagination
+  display: flex
+  align-items: center
+  &-step 
+    width: 6px
+    height: 6px
+    background: #A9BBC9
+    border-radius: 3px
+    margin-right: 10px
+    transition: 0.3s
+    &_active
+      width: 30px
+      height: 4px
+      background: #01BAF5
+      border-radius: 2px
+
+
+input[type="number"]
+  -moz-appearance: textfield
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    margin: 0
+  &:hover, &:focus
+  // -moz-appearance: textfield
+    -webkit-appearance: none
+    margin: 0
+    -moz-appearance: number-input
+.step-input__icon_active
+  display: none
+.step-input__sex:checked + label
+  background: rgba(0, 194, 255, 0.0665975)
+  .step-input__icon
+    display: none
+  .step-input__icon_active
+    display: block
+  & .step-input__placeholder
+    color: #01BAF5
+    opacity: 0.31
+  & svg *
+    fill: #01BAF5
+
+
+
+.container
+  padding-top: 29px
+  width: 100%
+  background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%)
+
+.btn__hamburger
+  width: 42px
+  height: 42px
+  background: linear-gradient(129.67deg, rgba(122, 127, 133, 4e-05) 14.52%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(133.76deg, #E6E7ED -18.17%, #F7F8FA 140.27%)
+  background-blend-mode: soft-light, normal
+  mix-blend-mode: normal
+  opacity: 0.6
+  box-shadow: 1px 1px 5px #B1B5C6, -2px -2px 8px #FAFAFC, inset 1px 1px 3px #EBECF0
+  border-radius: 6px
+  margin-left: 27px
+  margin-bottom: 32px
+  position: relative
+  cursor: pointer
+  & span 
+    display: block
+    position: absolute;
+    width: 20px
+    height: 3.24px
+    top: 19px
+    left: 11px
+    background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%)
+    border-radius: 2px
+  &::before, &::after
+    content: ""
+    display: block
+    position: absolute;
+    width: 20px
+    height: 3.24px
+    background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%)
+    border-radius: 2px
+    left: 11px
+  &::before
+    top: 12px
+  &::after 
+    top: 26px
+    
+.content 
+  min-height: calc(100vh - 104px)
+  background: linear-gradient(293.65deg, #F7F8FA 7.39%, #FDFDFD 92.37%)
+  box-shadow: 0px -3px 9px rgba(203, 203, 203, 0.5)
+  border-radius: 32px 32px 0px 0px
+  padding: 42px 35px 32px 42px
+  
+.step
+  overflow: hidden
+  &-row 
+    display: flex
+  &-top 
+    display: flex
+    justify-content: space-between
+  &__number
+    display: block
+    margin-top: 48px
+    margin-bottom: 11px
+    font-family: 'SF UI Text Medium'
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 32px
+    letter-spacing: -0.777778px
+    color: #00B2F1
+    mix-blend-mode: normal
+    opacity: 0.5
+  &__title
+    display: block
+    font-family: 'SF UI Text Bold'
+    font-size: 30px
+    line-height: 42px
+    letter-spacing: -1px
+    color: #535A6C
+    margin-bottom: 19px
+  &__desc 
+    display: block
+    font-family: 'SF UI Text Medium'
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: -1px
+    color: #4F6172
+    mix-blend-mode: normal
+    opacity: 0.8
+    margin-bottom: 34px
+  &-close 
+    width: 24px
+    height: 24px
+    background: linear-gradient(129.67deg, rgba(122, 127, 133, 0.4) 14.52%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(133.76deg, #E6E7ED -18.17%, #F7F8FA 140.27%)
+    background-blend-mode: soft-light, normal
+    box-shadow: 1px 1px 5px #B1B5C6, -2px -3px 8px #FAFAFC, inset 1px 1px 3px #EBECF0
+    border-radius: 5px
+    position: relative
+    cursor: pointer
+    &:before, &:after 
+      content: ""
+      position: absolute
+      display: flex
+      width: 11px
+      height: 3px
+      // opacity: 0.5
+      border-radius: 2px
+      background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%)
+      // background: #44454A
+      // box-shadow: 1px 1px 7px #EBECF0, inset 3px 3px 8px #C2C3CA, inset -5px -4px 10px #888989
+    &::before
+      transform-origin: top left
+      transform: rotate(45deg)
+      top: 7px
+      left: 8.5px
+    &::after
+      transform-origin: top right
+      transform: rotate(-45deg)
+      top: 7px
+      left: 3.5px
+  &-label 
+    &__wrap
+      height: 52px
+      margin-bottom: 21px
+      padding: 12px
+      background: #FFFFFF
+      box-sizing: border-box
+      border-radius: 5px
+      position: relative
+      border: 0px solid transparent
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &_focus
+        box-shadow: none !important
+        border: 1px solid rgba(1, 186, 245, 0.362708)
+        & input
+          color: #01BAF5 !important
+    &__50
+      width: 50%
+      // box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5)
+      border-radius: 5px
+      cursor: pointer
+      transition: 0.3s
+      &:nth-child(2)
+        margin-right: 21px
+      &_active
+        background: rgba(0, 194, 255, 0.0665975)
+    &__100
+      width: 100%
+    &__fs
+      padding: 12.5px
+      box-shadow: 1px 1px 1px rgba(241, 241, 241, 0.5), inset 0px 2px 5px rgba(172, 172, 172, 0.5);
+      & input 
+        position: absolute
+        width: 100%
+        height: 100%
+        padding-right: 24px
+        left: 0
+        top: 0
+        text-align: right
+        border: none 
+        background: none 
+        font-family: 'SF UI Text Bold'
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: -0.888889px
+        mix-blend-mode: normal
+        opacity: 0.64
+        color: #687F96
+    &__count
+  &-input
+    &__sex
+      visibility: hidden
+      width: 0.0001px
+      height: 0.0001px
+      z-index: -99
+      opacity: 0
+      position: absolute
+    &__placeholder 
+      font-family: 'SF UI Text Medium'
+      font-size: 16px
+      line-height: 27px
+      letter-spacing: -0.888889px
+      color: #687F96
+      mix-blend-mode: normal
+      opacity: 0.18
+  &-bottom
+    margin-top: 10px
+    padding-top: 31px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:before 
+      content: ""
+      position: absolute
+      display: block
+      background: #EDEEF0
+      mix-blend-mode: normal
+      opacity: 0.73
+      width: 100%
+      height: 1px
+      top: 0
+      left: 0
+  &__btn
+    width: 160px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+    border-radius: 6px
+    border: none  
+    padding: 19px 24px
+    & span 
+      font-family: 'SF UI Text Bold'
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: -0.95px
+    &-next 
+      box-shadow: 1px 1px 6px #BDC1D1, -1px -1px 10px #FAFBFC, inset 1px 1px 9px #5BD7FF
+      background: linear-gradient(159.56deg, #26C6FF 0%, #0ABDFD 100%)
+      & span 
+        color: #FFFFFF
+    &-back
+      background: #FFFFFF
+      box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5)
+      & span 
+        color: #687F96
+
+
+.inputHidden
+  z-index: -999
+  opacity: 0
+  visibility: hidden
+  width: 0.0001px
+  height: 0.0001px
+  position: absolute
+
+.labels
+  display: flex
+  flex-direction: column
+.step2__label
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+  height: 52px
+  background: #FFFFFF
+  box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5)
+  border-radius: 5px
+  padding: 18px 16px
+  position: relative
+  &:after 
+    content: ""
+    position: absolute
+    width: 20px
+    height: 20px
+    right: 19px
+    top: 16px
+    background: #E4ECF4
+    mix-blend-mode: normal
+    opacity: 0.38
+    box-shadow: inset 0px 1px 1px rgba(120, 119, 119, 0.5)
+    border-radius: 4px
+    z-index: 1
+  &:before 
+    content: ""
+    z-index: -1
+    position: absolute
+    width: 20px
+    height: 20px
+    right: 19px
+    top: 16px
+    background: #01BAF5
+    background-image: url(../img/check.png)
+    background-repeat: no-repeat
+    background-position: center center
+    box-shadow: inset 0px 1px 3px rgba(131, 131, 131, 0.5)
+    border-radius: 4px
+.label-text 
+  font-family: 'SF UI Text Medium'
+  font-size: 16px
+  line-height: 19px
+  letter-spacing: -0.888889px
+  color: #687F96
+  mix-blend-mode: normal
+  opacity: 0.4
+.step3__label
+  width: 50%
+  background: #FFFFFF
+  box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5)
+  border-radius: 5px
+  height: 52px
+  padding: 17px
+  margin-bottom: 20px
+  &:nth-child(2)
+    margin-right: 20px
+
+.step_4, .step_5
+  // min-height: 100vh
+  padding-left: 15px
+  padding-right: 15px
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  display: flex
+  flex-direction: column
+  text-align: center
+  justify-content: center
+  align-items: center
+  height: 100%
+  width: 100%
+  background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%)
+  mix-blend-mode: normal
+  & .btn__hamburger
+    position: absolute
+    left: 0
+    top: 29px
+.step-circle
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 44px
+  margin-bottom: 40px
+  width: 150px
+  height: 150px
+  background: #F3F6FA
+  box-shadow: 10px 10px 30px #DFE9F7, 2px -20px 30px rgba(255, 255, 255, 0.8), -1px -1px 1px rgba(255, 255, 255, 0.5), inset 0px 1px 1px #FFFFFF
+  border-radius: 135px
+  position: relative
+  &:after 
+    content: ""
+    position: absolute
+    width: 116px
+    height: 116px
+    border: 5px solid #E6E9EF
+    border-radius: 50%
+  &__val 
+    display: block
+    font-family: 'SF UI Text Bold'
+    font-size: 42px
+    line-height: 50px
+    text-align: center
+    letter-spacing: -0.875px
+    color: #687F96
+
+.inputStep_2:checked + label
+  background: rgba(0, 194, 255, 0.0665975)
+  box-shadow: inset 0px 1px 3px rgba(14, 132, 169, 0.214215)
+  border-radius: 5px
+  &:before 
+    z-index: 3
+  & .label-text
+    color: #01BAF5
+.inputStep_3:checked + label
+  background: rgba(0, 194, 255, 0.0665975)
+  box-shadow: inset 0px 1px 3px rgba(14, 132, 169, 0.214215)
+  border-radius: 5px
+  &:before 
+    z-index: 3
+  & .label-text
+    color: #01BAF5
+
+.input-required 
+  box-shadow: none !important
+  border: 1px solid rgba(245, 1, 1, 0.36)
+
+.step-images__wrap
+  position: absolute
+  bottom: 125px
+  left: 0
+.lineImg_1
+  position: absolute
+  left: 0
+  background-image: url(../img/line_2.png)
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  height: 100px
+  width: 1000px
+  animation-name: line1
+  animation-duration: 5s
+  animation-timing-function: linear
+  animation-iteration-count: infinite 
+  animation-fill-mode: backwards
+  animation-direction: alternate
+.lineImg_2
+  position: absolute
+  left: 0
+  background-image: url(../img/line_1.png)
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  height: 100px
+  width: 1000px
+  animation-name: line2
+  animation-duration: 7s
+  animation-timing-function: linear
+  animation-iteration-count: infinite 
+  animation-fill-mode: backwards
+  animation-direction: alternate
+.lineImg_3
+  position: absolute
+  left: 0
+  background-image: url(../img/line_3.png)
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  height: 100px
+  width: 1000px
+  animation-name: line1
+  animation-duration: 6s
+  animation-timing-function: linear
+  animation-iteration-count: infinite 
+  animation-direction: alternate
+
+.shadow
+  animation-name: shadow
+  animation-duration: 1.3s
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite 
+
+
+.progress-ring
+  position: absolute
+  z-index: 2
+.progress-ring__circle
+  stroke-dasharray: 10 90
+  transform-origin: center
+  transform: rotate(-90deg)
+  transition: all 0.3s 
+.progress-ring__point
+  box-shadow: 5px 5px 10px rgba(150, 167, 192, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5)
+
+
+.progress-line
+  position: absolute
+  left: 71px
+  top: 10px
+  z-index: 9
+.progress-point
+  position: absolute
+  width: 11px
+  height: 11px
+  background: #F6F9FC;
+  box-shadow: 5px 5px 10px rgba(150, 167, 192, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5)
+  border-radius: 20px 
+  bottom: calc(100% - 20px)
+  left: calc(50% - 5.5px)
+  transition: all 1.5s
+  z-index: 10
+
+.step_1
+  // height: 0
+.step_2
+  max-height: 0
+.step_3
+  max-height: 0
+.step_4
+  transform: scale(0)
+  transition: all 0.3s
+.step_4_active
+  transform: scale(1)
+.step_5
+  transform: scale(0)
+  transition: all 0.3s
+.step_5_active
+  transform: scale(1)
+
+
+@keyframes  line1
+  0%
+    transform: translateX(0%)
+  100%
+    transform: translateX(-42%)
+@keyframes  line2
+  0%
+    transform: translateX(-45%)
+  100%
+    transform: translateX(0%)
+
+@keyframes  shadow
+  0%
+    box-shadow: 10px 10px 30px #DFE9F7
+  50%
+    box-shadow: 0px 0px 50px #01BAF542
+  100%
+    box-shadow: 10px 10px 30px #DFE9F7
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Checkup</title>
+</head>
+
+<body>
+
+  <div id="wrapper_desctop">
+    <p>This site only works on mobile devices.</p>
+  </div>
+
+
+  <div class="container">
+    <div class="btn__hamburger"><span></span></div>
+
+    <div class="content">
+      <div class="step-top">
+        <div class="pagination">
+          <div class="pagination-step pagination-step_active"></div>
+          <div class="pagination-step"></div>
+          <div class="pagination-step"></div>
+          <div class="pagination-step"></div>
+        </div>
+        <div class="step-close"></div>
+      </div>
+      <div class="step step_1">
+        <span class="step__number">Step 1</span>
+        <span class="step__title">General Information</span>
+        <span class="step__desc">Let’s start by getting some information about you </span>
+        <label for="age" class="step-label__wrap step-label__fs step-label__100">
+          <span class="step-input__placeholder">Age</span>
+          <input id="age" type="number" class="step-input step-input__age">
+        </label>
+        <div class="step-row step-row__sex">
+          <input id="male" name="sex" type="radio" class="step-input__sex">
+          <label for="male" class="step-label__wrap step-label__sec step-label__50">
+            <span class="step-input__placeholder">Male</span>
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.37986" filter="url(#filter0_i)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M22.2456 0H16.9832C16.5885 0 16.2656 0.323444 16.2656 0.71875V1.19792C16.2656 1.59324 16.5885 1.91667 16.9832 1.91667H19.6981L13.9873 7.63672C12.5101 6.45676 10.6445 5.75 8.6112 5.75C3.8571 5.75 0 9.61323 0 14.375C0 19.1368 3.8571 23 8.6112 23C13.3653 23 17.2224 19.1368 17.2224 14.375C17.2224 12.3385 16.5168 10.4699 15.3387 8.99032L21.0496 3.27031V5.98958C21.0496 6.38489 21.3725 6.70833 21.7672 6.70833H22.2456C22.6403 6.70833 22.9632 6.38489 22.9632 5.98958V0.71875C22.9632 0.323444 22.6403 0 22.2456 0ZM8.6112 21.0833C4.90958 21.0833 1.9136 18.0885 1.9136 14.375C1.9136 10.6674 4.9036 7.66667 8.6112 7.66667C12.3129 7.66667 15.3088 10.6615 15.3088 14.375C15.3088 18.0826 12.3187 21.0833 8.6112 21.0833Z"
+                  fill="#E4ECF4" fill-opacity="0.644832" />
+              </g>
+              <defs>
+                <filter id="filter0_i" x="0" y="0" width="22.9632" height="24" filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha" />
+                  <feOffset dy="1" />
+                  <feGaussianBlur stdDeviation="1.5" />
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+                  <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
+                </filter>
+              </defs>
+            </svg>
+          </label>
+          <input id="female" name="sex" type="radio" class="step-input__sex">
+          <label for="female" class="step-label__wrap step-label__sec step-label__50">
+            <span class="step-input__placeholder">Female</span>
+            <img src="img/female.svg" alt="" class="step-input__icon">
+            <img src="img/female_active.svg" alt="" class="step-input__icon_active">
+          </label>
+        </div>
+        <div class="step-row">
+          <span></span>
+          <label for="height" class="step-label__wrap step-label__fs step-label__50">
+            <span class="step-input__placeholder">Height</span>
+            <input id="height" type="number" class="step-input step-input__height">
+          </label>
+          <label for="weight" class="step-label__wrap step-label__fs step-label__50">
+            <span class="step-input__placeholder">Weight</span>
+            <input id="weight" type="number" class="step-input step-input__weight">
+          </label>
+        </div>
+        <div class="step-bottom">
+          <button class="step__btn step__btn-next step__btn-next_1">
+            <span>Next</span>
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.68917 8.78322L18.6154 8.78322" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M11.2307 1.84616L18.6154 9.23077L11.2307 16.6154" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="step step_2">
+        <span class="step__number">Step 2</span>
+        <span class="step__title">Medical Conditions</span>
+        <span class="step__desc">Please select all that apply.</span>
+        <div class="labels">
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_1">
+          <label class="step2__label" for="check_1">
+            <span class="label-text">Allergies</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_3">
+          <label class="step2__label" for="check_3">
+            <span class="label-text">Asthma</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="4">
+          <label class="step2__label" for="4">
+            <span class="label-text">Cancer</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_5">
+          <label class="step2__label" for="check_5">
+            <span class="label-text">Cardiovascular</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_6">
+          <label class="step2__label" for="check_6">
+            <span class="label-text">Chronic Kidney Disease</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_7">
+          <label class="step2__label" for="check_7">
+            <span class="label-text">Chronic Lung Disease</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_8">
+          <label class="step2__label" for="check_8">
+            <span class="label-text">Hepititus</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_9">
+          <label class="step2__label" for="check_9">
+            <span class="label-text">Hypertension</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_10">
+          <label class="step2__label" for="check_10">
+            <span class="label-text">Ischemic Heart Disease</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_11">
+          <label class="step2__label" for="check_11">
+            <span class="label-text">Chronic Lung Disease</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_12">
+          <label class="step2__label" for="check_12">
+            <span class="label-text">Hepititus</span>
+          </label>
+          <input type="checkbox" class="inputHidden inputStep_2" name="medical" id="check_13">
+          <label class="step2__label" for="check_13">
+            <span class="label-text">Ischemic Heart Disease</span>
+          </label>
+        </div>
+        <div class="step-bottom">
+          <button class="step__btn step__btn-back step__btn-back_2">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity="0.4">
+                <path d="M18.3108 9.67832L1.38464 9.67832" stroke="#687F96" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M8.76926 16.6154L1.38464 9.23075L8.76926 1.84613" stroke="#687F96" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>
+            <span>Back</span>
+          </button>
+          <button class="step__btn step__btn-next step__btn-next_2">
+            <span>Next</span>
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.68917 8.78322L18.6154 8.78322" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M11.2307 1.84616L18.6154 9.23077L11.2307 16.6154" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="step step_3">
+        <span class="step__number">Step 3</span>
+        <span class="step__title">COVID-19 Screening</span>
+        <span class="step__desc">Were you diagnosed with COVID-19?</span>
+        <div class="step-row">
+          <input type="radio" class="inputHidden inputStep_3" name="COVID-19" id="check_14">
+          <label class="step3__label step__btn-next_3" for="check_14">
+            <span class="label-text">Yes</span>
+          </label>
+          <input type="radio" class="inputHidden inputStep_3" name="COVID-19" id="check_15">
+          <label class="step3__label step__btn-next_3" for="check_15">
+            <span class="label-text">No</span>
+          </label>
+        </div>
+        <div class="step-bottom">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="step step_4">
+      <div class="btn__hamburger"><span></span></div>
+
+      <span class="step__title">Start Recording</span>
+      <span class="step__desc">Answer a few questions and share a voice sample to help us study COVID-19.</span>
+      <div class="step-circle step__btn-next_4 shadow">
+        <img src="img/radio.png" alt="" class="">
+
+      </div>
+
+    </div>
+    <div class="step step_5">
+      <div class="btn__hamburger"><span></span></div>
+
+      <span class="step__title">Keep Talking</span>
+      <span class="step__desc">Answer a few questions and share a voice sample to help us study COVID-19.</span>
+      <div class="step-circle step__btn-next_5 shadow">
+        <svg id="ring" class="progress-ring" width="131" height="131">
+
+          <circle id="circle" class="progress-ring__circle" stroke="#01BAF5" stroke-width="4" cx="66" cy="66" r="61"
+            fill="transparent" />
+        </svg>
+        <!-- <img src="img/progress.png" alt="" class="progress-line"> -->
+        <span class="progress-point"></span>
+        <span class="step-circle__val">15</span>
+      </div>
+      <div class="step-images__wrap">
+          <div class="lineImg_2"></div>
+          <div class="lineImg_3"></div>
+          <div class="lineImg_1"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

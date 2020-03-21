@@ -1,0 +1,112 @@
+$(document).ready(function() {
+
+  $('.btn__hamburger').click(function() {
+
+  });
+
+  $('.step-label__wrap').find('.step-input').focus(function() {
+    $(this).parents('.step-label__wrap').addClass('step-label__wrap_focus');
+  });
+  $('.step-label__wrap').find('.step-input').focusout(function() {
+    $(this).parents('.step-label__wrap').removeClass('step-label__wrap_focus');
+  });
+
+  $('.step__btn-next_1').click(function() {
+    var input1 = $('.step-input__age');
+    var input2 = $('.step-input__height');
+    var input3 = $('.step-input__weight');
+    var radios = $('.step-input__sex');
+    var radioVal = [];
+    for(var i = 0; i < radios.length; i++){
+      radioVal.push(radios.eq(i).prop("checked"));
+    }
+    // if(input1.val() != '' && input2.val() != '' && input3.val() != '' && $.inArray(true, radioVal) != -1){
+      $('.step_1').animate({'max-height' : 0}, 300);
+      $('.step_2').delay(300).animate({'max-height' : '1200px'}, 600);
+      $('.pagination-step').removeClass('pagination-step_active');
+      $('.pagination-step').eq(1).addClass('pagination-step_active');
+    // }
+  });
+
+  var proressInterval = [];
+  var i = 0;
+
+
+  $('.step__btn-back_2').click(function() {
+    $('.step_1').animate({'max-height' : '530px'}, 300);
+    $('.step_2').delay(300).animate({'max-height' : 0}, 300);
+    $('.pagination-step').removeClass('pagination-step_active');
+    $('.pagination-step').eq(0).addClass('pagination-step_active');
+  });
+  $('.step__btn-next_2').click(function() {
+    $('.step_2').animate({'max-height' : 0}, 600);
+    $('.step_3').delay(300).animate({'max-height' : '350px'}, 300);
+    $('.pagination-step').removeClass('pagination-step_active');
+    $('.pagination-step').eq(2).addClass('pagination-step_active');
+  });
+  $('.step__btn-next_3').click(function() {
+    $('.step_3').animate({'max-height' : 0}, 300);
+    // $('.step_4').delay(300).animate({'max-height' : '100%'}, 300);
+    $('.step_4').addClass('step_4_active');
+    $('.pagination-step').removeClass('pagination-step_active');
+    $('.pagination-step').eq(3).addClass('pagination-step_active');
+  });
+  $('.step__btn-next_4').click(function() {
+    clearInterval(proressInterval);
+    proressInterval = setInterval(proressAnim, 1000);
+    // $('.step_4').animate({'max-height' : 0}, 300);
+    // $('.step_5').delay(300).animate({'max-height' : '100%'}, 300);
+    $('.step_5').addClass('step_5_active');
+    setTimeout(function() {
+      $('.step_4').removeClass('step_4_active');
+    }, 300);
+    $('.pagination-step').removeClass('pagination-step_active');
+    $('.pagination-step').eq(0).addClass('pagination-step_active');
+  });
+  $('.step__btn-next_5').click(function() {
+    // $('.step_5').animate({'max-height' : 0}, 300);
+    $('.step_5').removeClass('step_5_active');
+    $('.step_1').animate({'max-height' : '530px'}, 300);
+    $('.pagination-step').removeClass('pagination-step_active');
+    $('.pagination-step').eq(0).addClass('pagination-step_active');
+  });
+  
+  var circle = $('.progress-ring__circle');
+  var radius = circle.attr('r');
+  var circumference = 2 * Math.PI * radius;
+  
+  circle.css({'stroke-dasharray' : circumference + ' ' + circumference});
+  circle.css({'stroke-dashoffset' : circumference});
+  
+  function setProgress(percent) {
+    var offset = circumference - percent / 100 * circumference;
+    circle.css({'stroke-dashoffset' : offset});
+  }
+  var point = $('.progress-point')
+  var radius = 61;
+  var f = 0;
+  var s = 2 * Math.PI / 63; 
+  var t = 0;
+  function proressAnim() {
+    if(i >= 100){
+      $('.step_5').removeClass('step_5_active');
+      $('.step_1').animate({'max-height' : '530px'}, 300);
+      $('.pagination-step').removeClass('pagination-step_active');
+      $('.pagination-step').eq(0).addClass('pagination-step_active');
+      clearInterval(proressInterval);
+      i = 0;
+    }
+    setProgress(i);
+    $('.step-circle__val').text(t+=1);
+    i += 1.6;
+    f += s; 
+    point.css({'left' :  70 + radius * Math.sin(f)  + 'px' }); 
+    point.css({'bottom' : 70 + radius * Math.cos(f) + 'px' });
+  }
+  
+
+  
+  // proressInterval = setInterval(proressAnim, 1000);
+
+  // clearInterval(proressInterval);
+});
