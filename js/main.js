@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
     // if(input1.val() != '' && input2.val() != '' && input3.val() != '' && $.inArray(true, radioVal) != -1){
       $('.step_1').animate({'max-height' : 0}, 300);
-      $('.step_2').delay(300).animate({'max-height' : '1200px'}, 600);
+      $('.step_2').delay(300).animate({'max-height' : '1300px'}, 600);
       $('.pagination-step').removeClass('pagination-step_active');
       $('.pagination-step').eq(1).addClass('pagination-step_active');
     // }
@@ -33,14 +33,14 @@ $(document).ready(function() {
 
 
   $('.step__btn-back_2').click(function() {
-    $('.step_1').animate({'max-height' : '530px'}, 300);
+    $('.step_1').animate({'max-height' : '570px'}, 300);
     $('.step_2').delay(300).animate({'max-height' : 0}, 300);
     $('.pagination-step').removeClass('pagination-step_active');
     $('.pagination-step').eq(0).addClass('pagination-step_active');
   });
   $('.step__btn-next_2').click(function() {
     $('.step_2').animate({'max-height' : 0}, 600);
-    $('.step_3').delay(300).animate({'max-height' : '350px'}, 300);
+    $('.step_3').delay(300).animate({'max-height' : '400px'}, 300);
     $('.pagination-step').removeClass('pagination-step_active');
     $('.pagination-step').eq(2).addClass('pagination-step_active');
   });
@@ -63,13 +63,12 @@ $(document).ready(function() {
     $('.pagination-step').removeClass('pagination-step_active');
     $('.pagination-step').eq(0).addClass('pagination-step_active');
   });
-  $('.step__btn-next_5').click(function() {
-    // $('.step_5').animate({'max-height' : 0}, 300);
-    $('.step_5').removeClass('step_5_active');
-    $('.step_1').animate({'max-height' : '530px'}, 300);
-    $('.pagination-step').removeClass('pagination-step_active');
-    $('.pagination-step').eq(0).addClass('pagination-step_active');
-  });
+  // $('.step__btn-next_5').click(function() {
+  //   $('.step_5').removeClass('step_5_active');
+  //   $('.step_1').animate({'max-height' : '530px'}, 300);
+  //   $('.pagination-step').removeClass('pagination-step_active');
+  //   $('.pagination-step').eq(0).addClass('pagination-step_active');
+  // });
   
   var circle = $('.progress-ring__circle');
   var radius = circle.attr('r');
@@ -85,12 +84,12 @@ $(document).ready(function() {
   var point = $('.progress-point')
   var radius = 61;
   var f = 0;
-  var s = 2 * Math.PI / 63; 
+  var s = 2 * Math.PI / 59; 
   var t = 0;
   function proressAnim() {
-    if(i >= 100){
+    if(i > 100){
       $('.step_5').removeClass('step_5_active');
-      $('.step_1').animate({'max-height' : '530px'}, 300);
+      $('.step_1').animate({'max-height' : '570px'}, 300);
       $('.pagination-step').removeClass('pagination-step_active');
       $('.pagination-step').eq(0).addClass('pagination-step_active');
       clearInterval(proressInterval);
@@ -98,11 +97,14 @@ $(document).ready(function() {
       t = 0;
     }
     setProgress(i);
-    $('.step-circle__val').text(t+=1);
-    i += 1.6;
+    i += 1.7;
     f += s; 
-    point.css({'left' :  70 + radius * Math.sin(f)  + 'px' }); 
-    point.css({'bottom' : 70 + radius * Math.cos(f) + 'px' });
+    t += 1;
+    $('.step-circle__val').text(t);
+    var left = Math.floor(Number(radius * Math.sin(f) + 70)) + 'px';
+    var bottom = Math.floor(Number(radius * Math.cos(f) + 70)) + 'px';
+    point.css({'left' : left}); 
+    point.css({'bottom' : bottom});
   }
   
 
