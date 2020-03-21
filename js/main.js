@@ -95,6 +95,7 @@ $(document).ready(function() {
       $('.pagination-step').eq(0).addClass('pagination-step_active');
       clearInterval(proressInterval);
       i = 0;
+      t = 0;
     }
     setProgress(i);
     $('.step-circle__val').text(t+=1);
