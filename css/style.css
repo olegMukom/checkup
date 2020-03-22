@@ -40,8 +40,9 @@ input, button, a, img {
   outline: none !important; }
 
 body {
-  background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%);
-  position: relative; }
+  background: linear-gradient(293.65deg, #F7F8FA 7.39%, #FDFDFD 92.37%);
+  position: relative;
+  min-height: 100vh; }
 
 .container {
   display: none; }
@@ -59,9 +60,7 @@ body {
 @media (max-width: 576px) {
   .container {
     display: block;
-    padding-top: 29px;
-    width: 100%;
-    background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%); } }
+    width: 100%; } }
 
 .pagination {
   display: -webkit-box;
@@ -76,6 +75,7 @@ body {
     background: #A9BBC9;
     border-radius: 3px;
     margin-right: 10px;
+    margin-bottom: 26px;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
     .pagination-step_active {
@@ -106,13 +106,9 @@ input[type="number"] {
     fill: #01BAF5; }
 
 .container {
-  padding-top: 29px;
-  width: 100%;
-  background: linear-gradient(294.93deg, #E6E7ED 7.39%, #F7F8FA 92.37%); }
+  width: 100%; }
 
 .btn__hamburger {
-  width: 42px;
-  height: 42px;
   background: linear-gradient(129.67deg, rgba(122, 127, 133, 4e-05) 14.52%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(133.76deg, #E6E7ED -18.17%, #F7F8FA 140.27%);
   background-blend-mode: soft-light, normal;
   mix-blend-mode: normal;
@@ -120,40 +116,58 @@ input[type="number"] {
   -webkit-box-shadow: 1px 1px 5px #B1B5C6, -2px -2px 8px #FAFAFC, inset 1px 1px 3px #EBECF0;
           box-shadow: 1px 1px 5px #B1B5C6, -2px -2px 8px #FAFAFC, inset 1px 1px 3px #EBECF0;
   border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  margin-top: 29px;
   margin-left: 27px;
-  margin-bottom: 32px;
+  margin-bottom: 37px;
   position: relative;
   cursor: pointer; }
   .btn__hamburger span {
     display: block;
     position: absolute;
-    width: 20px;
-    height: 3.24px;
-    top: 19px;
-    left: 11px;
+    width: 15px;
+    height: 2.24px;
+    top: 15px;
+    left: 9px;
     background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%);
     border-radius: 2px; }
   .btn__hamburger::before, .btn__hamburger::after {
     content: "";
     display: block;
     position: absolute;
-    width: 20px;
-    height: 3.24px;
+    width: 15px;
+    height: 2.24px;
     background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%);
     border-radius: 2px;
-    left: 11px; }
+    left: 9px; }
   .btn__hamburger::before {
-    top: 12px; }
+    top: 10px; }
   .btn__hamburger::after {
-    top: 26px; }
+    top: 20px; }
+  .btn__hamburger_active:before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 10px;
+    top: 6px; }
+  .btn__hamburger_active:after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 10px;
+    top: 14px; }
+
+.step-nav__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 27px; }
 
 .content {
-  min-height: calc(100vh - 104px);
-  background: linear-gradient(293.65deg, #F7F8FA 7.39%, #FDFDFD 92.37%);
-  -webkit-box-shadow: 0px -3px 9px rgba(203, 203, 203, 0.5);
-          box-shadow: 0px -3px 9px rgba(203, 203, 203, 0.5);
   border-radius: 32px 32px 0px 0px;
-  padding: 42px 35px 32px 42px; }
+  padding: 0px 35px 32px 42px; }
 
 .step {
   overflow: hidden; }
@@ -200,23 +214,26 @@ input[type="number"] {
     opacity: 0.8;
     margin-bottom: 34px; }
   .step-close {
-    width: 24px;
-    height: 24px;
     background: linear-gradient(129.67deg, rgba(122, 127, 133, 0.4) 14.52%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(133.76deg, #E6E7ED -18.17%, #F7F8FA 140.27%);
     background-blend-mode: soft-light, normal;
     -webkit-box-shadow: 1px 1px 5px #B1B5C6, -2px -3px 8px #FAFAFC, inset 1px 1px 3px #EBECF0;
             box-shadow: 1px 1px 5px #B1B5C6, -2px -3px 8px #FAFAFC, inset 1px 1px 3px #EBECF0;
+    width: 32px;
+    opacity: 0.6;
+    height: 32px;
     border-radius: 5px;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: 29px; }
     .step-close:before, .step-close:after {
       content: "";
       position: absolute;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 11px;
+      width: 16px;
       height: 3px;
+      opacity: 0.5;
       border-radius: 2px;
       background: linear-gradient(174.09deg, #B2BFE1 6.32%, #A6ACBB 91.49%); }
     .step-close::before {
@@ -224,15 +241,15 @@ input[type="number"] {
               transform-origin: top left;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
-      top: 7px;
-      left: 8.5px; }
+      top: 9px;
+      left: 11px; }
     .step-close::after {
       -webkit-transform-origin: top right;
               transform-origin: top right;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
-      top: 7px;
-      left: 3.5px; }
+      top: 9px;
+      left: 5px; }
   .step-label__wrap {
     height: 52px;
     margin-bottom: 21px;
@@ -331,7 +348,7 @@ input[type="number"] {
       top: 0;
       left: 0; }
   .step__btn {
-    width: 160px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -357,6 +374,7 @@ input[type="number"] {
       .step__btn-next span {
         color: #FFFFFF; }
     .step__btn-back {
+      margin-right: 20px;
       background: #FFFFFF;
       -webkit-box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5);
               box-shadow: 0px 2px 4px rgba(221, 221, 221, 0.5); }
@@ -479,7 +497,7 @@ input[type="number"] {
   .step_4 .btn__hamburger, .step_5 .btn__hamburger {
     position: absolute;
     left: 0;
-    top: 29px; }
+    top: 0; }
 
 .step-circle {
   display: -webkit-box;
@@ -622,7 +640,7 @@ input[type="number"] {
   z-index: 2; }
 
 .progress-ring__circle {
-  stroke-dasharray: 10 90;
+  stroke-dasharray: 1 360;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: rotate(-90deg);
@@ -648,8 +666,8 @@ input[type="number"] {
   -webkit-box-shadow: 5px 5px 10px rgba(150, 167, 192, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
           box-shadow: 5px 5px 10px rgba(150, 167, 192, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   z-index: 10; }
 
 .step_2 {

@@ -53,7 +53,9 @@ $(document).ready(function() {
   });
   $('.step__btn-next_4').click(function() {
     clearInterval(proressInterval);
-    proressInterval = setInterval(proressAnim, 1000);
+    // clearInterval(clearIntervalTime);
+    proressInterval = setInterval(proressAnim, 100);
+    clearIntervalTime = setInterval(timerVal, 1000);
     // $('.step_4').animate({'max-height' : 0}, 300);
     // $('.step_5').delay(300).animate({'max-height' : '100%'}, 300);
     $('.step_5').addClass('step_5_active');
@@ -79,34 +81,45 @@ $(document).ready(function() {
   
   function setProgress(percent) {
     var offset = circumference - percent / 100 * circumference;
+    // offset = 383 - offset;
     circle.css({'stroke-dashoffset' : offset});
   }
   var point = $('.progress-point')
   var radius = 61;
   var f = 0;
-  var s = 2 * Math.PI / 59; 
-  var t = 0;
+  var s = 2 * Math.PI / 103; 
+  var t = 9;
   function proressAnim() {
     if(i > 100){
-      $('.step_5').removeClass('step_5_active');
       $('.step_1').animate({'max-height' : '570px'}, 300);
+      $('.step_5').removeClass('step_5_active');
       $('.pagination-step').removeClass('pagination-step_active');
       $('.pagination-step').eq(0).addClass('pagination-step_active');
       clearInterval(proressInterval);
+      clearInterval(clearIntervalTime);
+      clearTimeout = setTimeout(timetOuutStep6, 4000);
       i = 0;
-      t = 0;
+      t = 9;
+      point.css({'left' : '71px'}); 
+      point.css({'bottom' : '132px'});
+    } else {
+      setProgress(i);
+      i += 1;
+      f += s; 
+      var left = Math.floor(Number(radius * Math.sin(f) + 72));
+      var bottom = Math.floor(Number(radius * Math.cos(f) + 72));
+      point.css({'left' : left}); 
+      point.css({'bottom' : bottom});
     }
-    setProgress(i);
-    i += 1.7;
-    f += s; 
-    t += 1;
-    $('.step-circle__val').text(t);
-    var left = Math.floor(Number(radius * Math.sin(f) + 70)) + 'px';
-    var bottom = Math.floor(Number(radius * Math.cos(f) + 70)) + 'px';
-    point.css({'left' : left}); 
-    point.css({'bottom' : bottom});
   }
   
+  function timerVal() {
+    $('.step-circle__val').text(t);
+    t -= 1;
+  }
+  
+  // proressInterval = setInterval(proressAnim, 100);
+  // clearIntervalTime = setInterval(timerVal, 1000);
 
   
   // proressInterval = setInterval(proressAnim, 1000);
